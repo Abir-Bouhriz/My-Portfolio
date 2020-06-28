@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Amiri', serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header{
+    position: absolute;
+    right: 15px;
+    padding: 0 15px;
+    z-index: 10;
+}
+
+header .row{
+    align-items: center;
+}
+
+header .navbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header .navbar ul li{
+    display: inline-block;
+    margin-left: 35px;
+}
+
+header .navbar ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    line-height: 60px;
+    color: #ffffff;
+    display: block;
+    font-weight: 600;
+    position: relative;
+}
+
+header .navbar ul li a.current::before{
+    content: '';
+    height: 3px;
+    background-color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+.home{
+    min-height: 100vh;
+    background-image: url(image/home.jpg);
+    background-size: cover;
+    background-position: center;
+}
