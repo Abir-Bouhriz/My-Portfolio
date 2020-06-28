@@ -42,7 +42,7 @@ header .navbar ul li{
 }
 
 header .navbar ul li a{
-    font-size: 20px;
+    font-size: 16px;
     text-decoration: none;
     line-height: 60px;
     color: #ffffff;
@@ -51,18 +51,100 @@ header .navbar ul li a{
     position: relative;
 }
 
-header .navbar ul li a.current::before{
+header .navbar ul li a::before{
     content: '';
     height: 3px;
     background-color: #fff;
-    width: 100%;
+    width: 0%;
     position: absolute;
-    left: 0;
+    right: 0;
     bottom: -1px;
+    transition: all .5s ease;
 }
+
+header .navbar ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+
+header .navbar ul li a.current::before{
+    width: 100%;
+    left: 0;
+}
+
 .home{
     min-height: 100vh;
     background-image: url(image/home.jpg);
     background-size: cover;
     background-position: center;
+    padding: 15px;
 }
+
+.home .full-screen{
+    min-height: 100vh;
+}
+
+.home .home-content{
+    flex: 0 0 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.home .home-content .block{
+    flex: 0 0 75%;
+    max-width: 75%;
+    padding-left: 35px;
+    border-left: 4px solid #fff;
+    margin-top: 50px;
+}
+
+
+.home .home-content .block h1{
+    color: #fff;
+    font-size: 70px;
+    font-weight: 600;
+    margin: 0;
+    padding: 0;
+    line-height: 3.5rem;
+}
+
+.home .home-content .block h3{
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    line-height: 3.5rem;
+}
+
+.home .home-content .block .cv-btn{
+    padding-top: 20px;
+}
+
+.home .home-content .block .cv-btn a{
+    border-radius: 4px;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 25px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    transition: all .5s ease;
+    background-color: transparent;
+}
+
+.home .home-content .block .cv-btn a:hover{
+    
+}
+
+
+
+
+
+
+
+
