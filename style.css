@@ -22,12 +22,31 @@ body{
 
 header{
     position: absolute;
-    right: 15px;
+    left: 0;
+    right: 0;
     padding: 0 15px;
-    z-index: 10;
+    border-bottom: 1px solid #423940;
+    z-index: 11;
+}
+header .brand-name a{
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+    position: relative;
+}
+header .brand-name a::before{
+    content: '';
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
 }
 
 header .row{
+    justify-content: space-between;
     align-items: center;
 }
 
@@ -43,9 +62,9 @@ header .navbar ul li{
 }
 
 header .navbar ul li a{
-    font-size: 16px;
+    font-size: 15px;
     text-decoration: none;
-    line-height: 60px;
+    line-height: 72px;
     color: #ffffff;
     display: block;
     font-weight: 600;
@@ -71,6 +90,20 @@ header .navbar ul li a:hover::before{
 header .navbar ul li a.current::before{
     width: 100%;
     left: 0;
+}
+
+.hamburger .fa{
+    font-size: 20px;
+    background-color: #fff;
+    height: 30px;
+    width: 35px;
+    color: #000;
+    border-radius: 3px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    border: 1px solid #eee;
 }
 /*end of header*/
 
@@ -122,7 +155,6 @@ header .navbar ul li a.current::before{
     line-height: 3.5rem;
 }
 /*button download*/
-
 .button {
     --offset: 10px;
     --border-size: 2px;
@@ -146,9 +178,11 @@ header .navbar ul li a.current::before{
     transition: background .8s ease;
     margin-top: 0.80rem;
   }
+
   .button:hover {
     background: rgba(100, 0, 0, 0.03);
   }
+
   .button__horizontal, .button__vertical {
     position: absolute;
     top: var(--horizontal-offset, 0);
@@ -161,43 +195,113 @@ header .navbar ul li a.current::before{
     transition: transform .8s ease, -webkit-transform .8s ease;
     will-change: transform;
   }
+
   .button__horizontal::before, .button__vertical::before {
     content: '';
     position: absolute;
     border: inherit;
   }
+
   .button__horizontal {
     --vertical-offset: calc(var(--offset) * -1);
     border-top: var(--border-size) solid currentcolor;
     border-bottom: var(--border-size) solid currentcolor;
   }
+
   .button__horizontal::before {
     top: calc(var(--vertical-offset) - var(--border-size));
     bottom: calc(var(--vertical-offset) - var(--border-size));
     left: calc(var(--vertical-offset) * -1);
     right: calc(var(--vertical-offset) * -1);
   }
+
   .button:hover .button__horizontal {
     -webkit-transform: scaleX(0);
             transform: scaleX(0);
   }
+
   .button__vertical {
     --horizontal-offset: calc(var(--offset) * -1);
     border-left: var(--border-size) solid currentcolor;
     border-right: var(--border-size) solid currentcolor;
   }
+
   .button__vertical::before {
     top: calc(var(--horizontal-offset) * -1);
     bottom: calc(var(--horizontal-offset) * -1);
     left: calc(var(--horizontal-offset) - var(--border-size));
     right: calc(var(--horizontal-offset) - var(--border-size));
   }
+
   .button:hover .button__vertical {
     -webkit-transform: scaleY(0);
             transform: scaleY(0);
   }
 /*end of button donload*/
 /*end of home*/
+
+/*responsive*/
+@media(max-width: 991px){
+    .home .home-content .block h1{
+        font-size: 50px;
+    }
+}
+
+@media(max-width: 767px){
+    .home .home-content .block h1{
+        font-size: 40px;
+    }
+    .home .home-content .block h3{
+        font-size: 25px;
+    }
+    header{
+        padding: 15px;
+        position: fixed;
+        background-color: #fff;
+        border: none;
+        border-bottom: 1px solid #eee;
+    }
+    .navbar{
+        position: absolute;
+        background-color: #fff;
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 15px;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        display: none;
+    }
+    .navbar.show{
+        display: block;
+    }
+    header .navbar ul li{
+        display: block;
+        margin-left: 0;
+    }
+    header .navbar ul li a{
+        line-height: 42px;
+        color: #000;
+    }
+    header .navbar ul li a::before{
+        background-color: #febd01;
+    }
+    .hamburger .fa{
+        display: inline-block;
+    }
+}
+
+@media(max-width: 500px){
+    .home .home-content .block h1{
+        font-size: 40px;
+    }
+    .home .home-content .block h3{
+        font-size: 25px;
+    }
+    .home .home-content .block{
+        padding-left: 20px;
+    }
+}
 
 
 
