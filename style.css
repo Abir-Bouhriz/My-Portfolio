@@ -27,6 +27,8 @@ header{
     padding: 0 15px;
     border-bottom: 1px solid #423940;
     z-index: 11;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 header .brand-name a{
     text-decoration: none;
@@ -114,6 +116,8 @@ header .navbar ul li a.current::before{
     background-size: cover;
     background-position: center;
     padding: 15px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 .home .full-screen{
@@ -240,6 +244,19 @@ header .navbar ul li a.current::before{
 /*end of button donload*/
 /*end of home*/
 
+/*about me*/
+.about-container{
+    width: 100%;
+    height: 330px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    margin: 2px auto 20px auto;
+    position: relative;
+}
+/*end of about me*/
+
 /*responsive*/
 @media(max-width: 991px){
     .home .home-content .block h1{
@@ -264,6 +281,7 @@ header .navbar ul li a.current::before{
     .navbar{
         position: absolute;
         background-color: #fff;
+        opacity: 0.9;
         width: 100%;
         left: 0;
         top: 60px;
@@ -282,9 +300,11 @@ header .navbar ul li a.current::before{
     header .navbar ul li a{
         line-height: 42px;
         color: #000;
+        font-weight: 600;
+        font-size: 20px;
     }
     header .navbar ul li a::before{
-        background-color: #febd01;
+        background-color: #e9007f;
     }
     .hamburger .fa{
         display: inline-block;
@@ -302,7 +322,7 @@ header .navbar ul li a.current::before{
         padding-left: 20px;
     }
 }
-
+/*end of responsive*/
 
 
 
