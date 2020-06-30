@@ -270,7 +270,7 @@ header .navbar ul li a.current::before{
 }
 
 .about-text p:nth-child(1){
-    color: #000;
+    color: #2e2e2e;
     font-weight: bold;
     font-size: 45px;
     line-height: 20px;
@@ -286,7 +286,7 @@ header .navbar ul li a.current::before{
 
   .btn {
     line-height: 100px;
-    color: #000;
+    color: #2e2e2e;
     font-weight: 600;
     cursor: pointer;
     letter-spacing: 0.075em;
