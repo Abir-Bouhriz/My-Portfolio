@@ -29,6 +29,8 @@ header{
     z-index: 11;
     border-radius: 20px;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    width: 98%;
+    margin: 2px auto 20px auto;
 }
 header .brand-name a{
     text-decoration: none;
@@ -118,6 +120,8 @@ header .navbar ul li a.current::before{
     padding: 15px;
     border-radius: 20px;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    width: 98%;
+    margin: 2px auto 20px auto;
 }
 
 .home .full-screen{
@@ -249,11 +253,11 @@ header .navbar ul li a.current::before{
 
 /*about me*/
 .about-container{
-    width: 100%;
+    width: 98%;
     min-height: 100vh;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
     background-color: #efefef;
     border-radius: 20px;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
     display: flex;
     margin: 2px auto 20px auto;
     position: relative;
@@ -355,10 +359,109 @@ header .navbar ul li a.current::before{
     width: calc(100% - .13em);
     border-image-slice: 1;
   }
-  
-
-
 /*end of about me*/
+
+/*my skills*/
+.inner{
+    padding: 20px;
+    background-color: #555;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    width: 98%;
+    margin: 2px auto 20px auto;
+    min-height: 100vh;
+}
+
+.skills-header{
+    text-align: center;
+    color: #fff;
+    padding: 1rem;
+    position: relative;
+}
+
+.skills-header:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: #2727ff;
+}
+
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+
+.skill-box{
+    padding: 1rem;
+    color: #ddd;
+    cursor: pointer;
+}
+
+.skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+    position: relative;
+}
+
+.img-hover{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 250px;
+    height: 150px;
+    margin-top: 6rem;
+}
+.img-hover img{
+    width: 100%;
+}
+.img-hover .front,
+.img-hover .back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 2s;
+    backface-visibility: hidden;
+    border: 2px solid #2727ff;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    margin-top: 3rem;
+}
+.img-hover .front{
+    transform: perspective(1000px) rotateY(0deg);
+    z-index: 2;
+    overflow: hidden;
+}
+.img-hover .back{
+    transform: perspective(1000px) rotateY(-180deg);
+    z-index: 2;
+    overflow: hidden;
+}
+.img-hover:hover .front{
+    transform: perspective(1000px) rotateY(-180deg);
+    z-index: 2;
+}
+.img-hover:hover .back{
+    transform: perspective(1000px) rotateY(0deg);
+    z-index: 2;
+}
+
+/*end of my skills*/
 
 /*responsive*/
 @media(max-width: 1000px){
@@ -384,6 +487,7 @@ header .navbar ul li a.current::before{
     .home .home-content .block h1{
         font-size: 50px;
     }
+
 }
 
 @media(max-width: 767px){
@@ -466,7 +570,13 @@ header .navbar ul li a.current::before{
     .home .home-content .block{
         padding-left: 20px;
     }
+    .skills-container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+    }
 }
+
+
 /*end of responsive*/
 
 
