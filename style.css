@@ -370,6 +370,8 @@ header .navbar ul li a.current::before{
     width: 98%;
     margin: 2px auto 20px auto;
     min-height: 100vh;
+    padding-left: 250px;
+    padding-left: 250px;
 }
 
 .skills-header{
@@ -379,6 +381,7 @@ header .navbar ul li a.current::before{
     font-size: 25px;
     position: relative;
     margin-top: 3rem;
+    margin-right: 250px;
 }
 
 .skills-header:after{
@@ -398,14 +401,12 @@ header .navbar ul li a.current::before{
     justify-content: center;
     align-items: center;
     text-align: center;
-    grid-gap: 1rem;
-    padding: 1rem 80px;
-    font-size: 1.2rem;
+    grid-gap: 3rem;
+    margin-left: 120px;
+    margin-top: 6rem;
 }
 
 .skill-box{
-    padding: 1rem;
-    color: #ddd;
     cursor: pointer;
 }
 
@@ -413,12 +414,13 @@ header .navbar ul li a.current::before{
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    width: 250px;
-    height: 150px;
-    margin-top: 6rem;
+    width: 350px;
+    height: 250px;
+    
 }
 .img-hover img{
     width: 100%;
+    margin-bottom: 1rem;
 }
 .img-hover .front,
 .img-hover .back{
@@ -456,6 +458,13 @@ header .navbar ul li a.current::before{
 /*end of my skills*/
 
 /*responsive*/
+@media(max-width: 1200px){
+    .skills-container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+        grid-gap:6rem;
+    }
+}
 @media(max-width: 1000px){
     .about-container{
         width: 100%;
@@ -479,14 +488,15 @@ header .navbar ul li a.current::before{
     .home .home-content .block h1{
         font-size: 50px;
     }
+}
+
+@media(max-width: 850px){
     .skills-container{
         grid-template-columns: repeat(2, 1fr);
         padding: 2rem 50px;
-        grid-gap:2rem;
+        grid-gap:3rem;
     }
-
 }
-
 @media(max-width: 767px){
     .home .home-content .block h1{
         font-size: 40px;
@@ -536,9 +546,11 @@ header .navbar ul li a.current::before{
         display: inline-block;
     }
     .skills-container{
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         padding: 2rem 50px;
-        grid-gap:2rem;
+    }
+    .skills-header{
+        font-size: 20px;
     }
 }
 @media(max-width: 670px){
@@ -565,8 +577,8 @@ header .navbar ul li a.current::before{
     .skills-container{
         grid-template-columns: repeat(1, 1fr);
         padding: 2rem 50px;
-        margin-top: 15px;
     }
+    
 }
 @media(max-width: 500px){
     .home .home-content .block h1{
