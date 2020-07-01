@@ -376,7 +376,9 @@ header .navbar ul li a.current::before{
     text-align: center;
     color: #fff;
     padding: 1rem;
+    font-size: 25px;
     position: relative;
+    margin-top: 3rem;
 }
 
 .skills-header:after{
@@ -417,7 +419,6 @@ header .navbar ul li a.current::before{
 }
 
 .img-hover{
-    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
@@ -487,6 +488,11 @@ header .navbar ul li a.current::before{
     .home .home-content .block h1{
         font-size: 50px;
     }
+    .skills-container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+        grid-gap:2rem;
+    }
 
 }
 
@@ -538,6 +544,11 @@ header .navbar ul li a.current::before{
     .hamburger .fa{
         display: inline-block;
     }
+    .skills-container{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 2rem 50px;
+        grid-gap:2rem;
+    }
 }
 @media(max-width: 670px){
     .about-container{
@@ -554,10 +565,16 @@ header .navbar ul li a.current::before{
     }
     .about-text p:nth-child(1){
         font-size: 35px;
+        margin-top: 15px;
     }
     .about-text p:nth-child(2),
     .about-text p:nth-child(3){
         font-size: 15px;
+    }
+    .skills-container{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 2rem 50px;
+        margin-top: 15px;
     }
 }
 @media(max-width: 500px){
@@ -570,10 +587,7 @@ header .navbar ul li a.current::before{
     .home .home-content .block{
         padding-left: 20px;
     }
-    .skills-container{
-        grid-template-columns: repeat(2, 1fr);
-        padding: 2rem 50px;
-    }
+    
 }
 
 
