@@ -409,15 +409,6 @@ header .navbar ul li a.current::before{
     cursor: pointer;
 }
 
-.skill-title{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0.5rem;
-    margin-bottom: 0.5rem;
-    position: relative;
-}
-
 .img-hover{
     top: 50%;
     left: 50%;
