@@ -29,7 +29,7 @@ header{
     z-index: 11;
     border-radius: 20px;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    width: 98%;
+    width: 99%;
     margin: 2px auto 20px auto;
 }
 header .brand-name a{
@@ -121,7 +121,7 @@ header .navbar ul li a.current::before{
     padding: 15px;
     border-radius: 20px;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    width: 98%;
+    width: 99%;
     margin: 2px auto 20px auto;
 }
 
@@ -266,7 +266,7 @@ header .navbar ul li a.current::before{
 
 /*about me*/
 .about-container{
-    width: 98%;
+    width: 99%;
     min-height: 100vh;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
     background-color: #d6dbdf;
@@ -384,7 +384,7 @@ header .navbar ul li a.current::before{
     background-color: #d6dbdf;
     border-radius: 20px;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    width: 98%;
+    width: 99%;
     margin: 2px auto 20px auto;
     min-height: 100vh;
     padding-left: 250px;
@@ -488,7 +488,7 @@ header .navbar ul li a.current::before{
     padding: 15px;
     border-radius: 20px;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    width: 98%;
+    width: 99%;
     margin: 2px auto 20px auto;
 }
 
@@ -573,19 +573,83 @@ textarea::placeholder{
     color: #fff;
 }
 
-.submit{
-    width: 40%;
-    padding: 4px;
-    background: none;
-    outline: none;
-    color: #fff;
-    font-size: 13px;
-    font-weight: bold;
-    height: 33px;
-    text-align: center;
-    cursor: pointer;
-    margin-left: 3%;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600");
+@-webkit-keyframes short-press {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
+@keyframes short-press {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.submit-button {
+  display: block;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: .75em;
+  letter-spacing: 1px;
+  height: 38px;
+  width: 120px;
+  margin-left: 3%;
+  line-height: 38px;
+  overflow: hidden;
+  background: none;
+  border-radius: 3px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.submit-button:hover, .submit-button:focus {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+.submit-button.animated {
+  -webkit-animation: 0.75s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
+          animation: 0.75s short-press cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+.submit-button > span {
+  display: block;
+  color: white;
+  text-align: center;
+}
+.submit-button > span.pre-state-msg {
+  -webkit-transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  transition: all 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+  -webkit-transition-delay: .75s;
+          transition-delay: .75s;
+}
+.submit-button.state-1 .pre-state-msg {
+  margin-top: -38px;
+}
+.submit-button.state-2 .pre-state-msg {
+  margin-top: -76px;
+}
+
 
 /*end of contact*/
 
@@ -683,6 +747,14 @@ textarea::placeholder{
     }
     .skills-header{
         font-size: 20px;
+    }
+    .contact-section .contact-form{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .contact-section .submit{
+        width: 60%;
     }
 }
 @media(max-width: 670px){
