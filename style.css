@@ -21,7 +21,7 @@ body{
 }
 
 header{
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     padding: 0 15px;
@@ -53,6 +53,7 @@ header .row{
     justify-content: space-between;
     align-items: center;
 }
+
 
 header .navbar ul{
     list-style: none;
@@ -360,6 +361,10 @@ header .navbar ul li a.current::before{
     border-image-slice: 1;
   }
 /*end of about me*/
+
+/*education*/
+    
+/*end of education*/
 
 /*my skills*/
 .inner{
