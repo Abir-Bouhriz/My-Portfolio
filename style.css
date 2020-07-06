@@ -123,6 +123,8 @@ header .navbar ul li a.current::before{
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
     width: 99%;
     margin: 2px auto 20px auto;
+    min-height: 100vh;
+    opacity: 0.9;
 }
 
 .home .full-screen{
@@ -256,6 +258,7 @@ header .navbar ul li a.current::before{
     text-decoration: none;
     padding: 0.4rem;
     line-height: 3.5rem;
+    z-index: 11;
 }
 
 .icons a:hover{
@@ -388,7 +391,6 @@ header .navbar ul li a.current::before{
     margin: 2px auto 20px auto;
     min-height: 100vh;
     padding-left: 250px;
-    padding-left: 250px;
 }
 
 .skills-header{
@@ -472,6 +474,65 @@ header .navbar ul li a.current::before{
     z-index: 2;
 }
 /*end of my skills*/
+
+/*projects*/
+.portfolio{
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    width: 99%;
+    margin: 2px auto 20px auto;
+    min-height: auto;
+    background-color: #d6dbdf;
+}
+
+.portfolio-title{
+    text-align: center;
+    color: #2e2e2e;
+    padding: 1rem;
+    font-size: 2em;
+    position: relative;
+    margin-top: 3rem;
+    margin-left: 450px;
+}
+
+.portfolio-title:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 4px;
+    width: 100px;
+    background-color: #9d272c;
+}
+
+.portfolio .portfolio-gallery{
+    flex: 0 0 100%;
+    max-width: 98%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.portfolio .portfolio-gallery .item{
+    flex: 0 0 calc(33.33% - 8px);
+    max-width: calc(33.33% - 8px);
+    margin-bottom: 50px;
+}
+
+.portfolio .portfolio-gallery .item img{
+    width: 80%;
+    display: block;
+    margin-left: 40px;
+}
+
+.portfolio .portfolio-gallery .item .overlay{
+    display: none;
+}
+/*end of projects*/
 
 /*contact*/
 .contact-container{
