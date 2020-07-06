@@ -514,12 +514,12 @@ header .navbar ul li a.current::before{
     margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .portfolio .portfolio-gallery .item{
     flex: 0 0 calc(33.33% - 8px);
-    max-width: calc(33.33% - 8px);
+    max-width: calc(30% - 8px);
     margin-bottom: 50px;
     position: relative;
 }
@@ -527,6 +527,7 @@ header .navbar ul li a.current::before{
 .portfolio .portfolio-gallery .item img{
     width: 100%;
     display: block;
+    height: 250px;
 }
 
 .portfolio .portfolio-gallery .item .overlay{
