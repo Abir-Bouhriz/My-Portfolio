@@ -601,6 +601,7 @@ header .navbar ul li a.current::before{
     background-color: rgba(0,0,0,0.6);
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .lightbox.show{

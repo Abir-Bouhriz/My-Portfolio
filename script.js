@@ -44,8 +44,9 @@ button.addEventListener('click', updateButtonMsg);
 
 
 //lightbox
-const closeLightbox=document.querySelector(".close-lightbox");
-const lightbox = document.querySelector(".lightbox")
+const closeLightbox = document.querySelector(".close-lightbox");
+const lightbox = document.querySelector(".lightbox");
+const lightboxImage = lightbox.querySelector("img");
 
 closeLightbox.addEventListener("click",function(){
   lightbox.classList.remove("show");
@@ -59,5 +60,6 @@ galleryItem.forEach(function(element){
   element.querySelector(".fa-plus").addEventListener("click",function(){
     lightbox.classList.remove("hide");
     lightbox.classList.add("show");
+    lightboxImage.src = element.querySelector("img").getAttribute("src");
   })
 })
