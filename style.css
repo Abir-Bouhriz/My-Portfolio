@@ -599,17 +599,25 @@ header .navbar ul li a.current::before{
     bottom: 0;
     z-index: 100;
     background-color: rgba(0,0,0,0.6);
-    display: flex;
     justify-content: center;
     align-items: center;
 }
 
+.lightbox.show{
+    display: flex;
+}
+
+.lightbox.hide{
+    display: none;
+}
+
 .lightbox .close-lightbox{
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
+    color: #9d272c;
     background-color: #fff;
     text-align: center;
-    line-height: 40px;
+    line-height: 35px;
     position: absolute;
     right: 10px;
     top: 10px;
