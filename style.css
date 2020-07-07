@@ -590,6 +590,40 @@ header .navbar ul li a.current::before{
     0%{ transform: translateY(20%); opacity: 0;}
     100%{ transform: translateY(0); opacity: 1;}
 }
+/*lightbox*/
+.lightbox{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background-color: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox .close-lightbox{
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 40px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 101;
+}
+
+.lightbox img{
+    max-width: 90%;
+    max-height: 80%;
+    display: block;
+}
+/*end of lightbox*/
 /*end of projects*/
 
 /*contact*/
