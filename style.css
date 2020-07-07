@@ -609,7 +609,7 @@ header .navbar ul li a.current::before{
 }
 
 .message-text .text h2{
-    font-size: 25px;
+    font-size: 22px;
     color: #fff;
     font-weight: 700;
     margin: 0;
@@ -634,6 +634,15 @@ header .navbar ul li a.current::before{
     font-weight: 600;
     transition: all .5s ease;
     background-color: transparent;
+}
+
+.message-text .button-msg a:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.align-items-center{
+    align-items: center;
 }
 /*end of get in touch*/
 
