@@ -518,10 +518,11 @@ header .navbar ul li a.current::before{
 }
 
 .portfolio .portfolio-gallery .item{
-    flex: 0 0 calc(33.33% - 8px);
-    max-width: calc(30% - 8px);
-    margin-bottom: 50px;
+    flex: 0 0 33.33%;
+    max-width: 30%;
+    margin-bottom: 30px;
     position: relative;
+    padding: 10px;
 }
 
 .portfolio .portfolio-gallery .item img{
@@ -536,21 +537,58 @@ header .navbar ul li a.current::before{
     top: 0;
     bottom: 0;
     right: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.6);
     z-index: 10;
     display: flex;
     flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all .5s ease;
 }
+
+.portfolio .portfolio-gallery .item:hover .overlay{
+    opacity: 1;
+}
+
 .portfolio .portfolio-gallery .item .overlay .fa{
     height: 50px;
     width: 50px;
-    background-color: #fff;
+    background-color: #9d272c;
+    color: #fff;
     display: inline-block;
     text-align: center;
     line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
 }
+
+.portfolio .portfolio-gallery .item:hover .overlay .fa{
+    -webkit-animation: galleryIcon .8s ease;
+    animation: galleryIcon .8s ease;
+}
+
+@keyframes galleryIcon{
+    0%{ transform: translateY(-20%); opacity: 0;}
+    100%{ transform: translateY(0); opacity: 1;}
+}
+
 .portfolio .portfolio-gallery .item .overlay h4{
-    background-color: #9d272c;
+    margin-top: 15px;
+    font-size: 25px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.portfolio .portfolio-gallery .item:hover .overlay h4{
+    -webkit-animation: galleryText .8s ease;
+    animation: galleryText .8s ease;
+}
+
+@keyframes galleryText{
+    0%{ transform: translateY(20%); opacity: 0;}
+    100%{ transform: translateY(0); opacity: 1;}
 }
 /*end of projects*/
 
