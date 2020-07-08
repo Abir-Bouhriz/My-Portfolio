@@ -176,7 +176,7 @@ header .navbar ul li a.current::before{
     --border-size: 2px;
     display: block;
     position: relative;
-    padding: 1.5em 3em;
+    padding: 1em 2em;
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -258,7 +258,7 @@ header .navbar ul li a.current::before{
 .icons a{
     color: #fff;
     text-decoration: none;
-    padding: 0.4rem;
+    padding: 0.8rem;
     line-height: 3.5rem;
     z-index: 11;
 }
@@ -379,9 +379,6 @@ header .navbar ul li a.current::before{
   }
 /*end of about me*/
 
-/*education*/
-    
-/*end of education*/
 
 /*my skills*/
 .inner{
