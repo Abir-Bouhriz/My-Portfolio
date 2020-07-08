@@ -30,10 +30,9 @@ header{
     z-index: 50;
     border-radius: 20px;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    background-color: #efefef;
+    background-color: transparent;
     width: 99%;
     margin: 2px auto 20px auto;
-    opacity: 0.9;
 }
 header .brand-name a{
     text-decoration: none;
@@ -73,7 +72,7 @@ header .navbar ul li a{
     font-size: 15px;
     text-decoration: none;
     line-height: 72px;
-    color: #555;
+    color: #fff;
     display: block;
     font-weight: 600;
     position: relative;
@@ -82,7 +81,7 @@ header .navbar ul li a{
 header .navbar ul li a::before{
     content: '';
     height: 3px;
-    background-color: #555;
+    background-color: rgba(228, 13, 13, 0.966);
     width: 0%;
     position: absolute;
     right: 0;
@@ -146,7 +145,7 @@ header .navbar ul li a.current::before{
     flex: 0 0 75%;
     max-width: 75%;
     padding-left: 35px;
-    border-left: 4px solid #fff;
+    border-left: 4px solid rgba(228, 13, 13, 0.966);
     margin-top: 50px;
 }
 
@@ -265,7 +264,7 @@ header .navbar ul li a.current::before{
 }
 
 .icons a:hover{
-    color: #b90912;
+    color: rgba(228, 13, 13, 0.966);
     transition: all 0.5s ease-out;
 }
 /*end of home*/
@@ -727,7 +726,7 @@ header .navbar ul li a.current::before{
     transform: translateX(-50%);
     height: 4px;
     width: 100px;
-    background-color: #b90912;
+    background-color: rgba(228, 13, 13, 0.966);
 }
 
 .contact-section .contact-container p{
