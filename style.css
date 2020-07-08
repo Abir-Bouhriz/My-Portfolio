@@ -11,7 +11,7 @@ body{
 }
 /*header*/
 .container{
-    max-width: 1140px;
+    width: 99%;
     margin: auto;
 }
 
@@ -36,7 +36,7 @@ header{
 }
 header .brand-name a{
     text-decoration: none;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 600;
     color: #fff;
     text-transform: uppercase;
@@ -69,7 +69,7 @@ header .navbar ul li{
 }
 
 header .navbar ul li a{
-    font-size: 15px;
+    font-size: 20px;
     text-decoration: none;
     line-height: 72px;
     color: #fff;
@@ -81,7 +81,7 @@ header .navbar ul li a{
 header .navbar ul li a::before{
     content: '';
     height: 3px;
-    background-color: rgba(228, 13, 13, 0.966);
+    background-color:  rgb(228, 13, 13);
     width: 0%;
     position: absolute;
     right: 0;
@@ -145,8 +145,9 @@ header .navbar ul li a.current::before{
     flex: 0 0 75%;
     max-width: 75%;
     padding-left: 35px;
-    border-left: 4px solid rgba(228, 13, 13, 0.966);
+    border-left: 4px solid  rgb(228, 13, 13);
     margin-top: 50px;
+    margin-left: 50px;
 }
 
 
@@ -264,7 +265,7 @@ header .navbar ul li a.current::before{
 }
 
 .icons a:hover{
-    color: rgba(228, 13, 13, 0.966);
+    color: rgb(228, 13, 13);
     transition: all 0.5s ease-out;
 }
 /*end of home*/
@@ -274,109 +275,58 @@ header .navbar ul li a.current::before{
     width: 99%;
     min-height: 100vh;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    background-color: #d6dbdf;
+    background: url(image/about.jpg);
+    background-size: cover;
+    background-position: center;
     border-radius: 20px;
-    display: flex;
     margin: 2px auto 20px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#about h1{
+    color:#000;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 4.5rem;
+}
+
+#about h1:after{
+    content: '';
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 100px;
+    background-color:  rgb(228, 13, 13);
+    height: 3px;
+}
+
+#about .about-container .about-content{
+    display: flex;
     position: relative;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 3rem;
 }
 
-.about-container img{
-    height: 350px;
+#about .about-container .about-content .about-photo img{
+    height: 300px;
+    width: 250px;
+    border: 1px solid #423940;
+    border-radius: 10px;
+    margin-left: 150px;
 }
 
-.about-text{
-    width: 550px;
+#about .about-container .about-content p{
+    font-size: 25px;
+    color: #000;
+    line-height: 1.5rem;
+    width: 500px;
+    padding-bottom: 1.5rem;
 }
 
-.about-text p:nth-child(1){
-    color: #2e2e2e;
-    font-weight: bold;
-    font-size: 45px;
-    line-height: 20px;
-}
-
-.about-text p:nth-child(2),
-.about-text p:nth-child(3){
-    color: #7e7d7d;
-    font-weight: bold;
-    font-size: 18px;
-    margin-top: 20px;
-}
-
-  .btn {
-    line-height: 100px;
-    color: #2e2e2e;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.075em;
-    padding: .5em 1em;
-    margin: auto ;
-    position: relative;
-    align-self: center;
-    text-transform: uppercase;
-    border: 3px #555 solid;
-    border-image: linear-gradient(45deg, #555 0%, #b90912 100%);
-    border-image-slice: 1 1 0 0;
-    z-index: 1;
-    box-shadow: -0.5em 0.5em rgba(16, 24, 50, 0);
-    transform-origin: left bottom;
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
-  }
-  .btn:before, .btn:after {
-    border: 3px #555 solid;
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: -1;
-  }
-  .btn:before {
-    border-image: linear-gradient(45deg, #555 0%, #b90912 100%);
-    border-image-slice: 1 1 0 1;
-    left: -0.59em;
-    top: .15em;
-    width: .31em;
-    height: 100%;
-    transform: skewY(-45deg);
-  }
-  .btn:after {
-    border-image: linear-gradient(45deg, #555 0%, #b90912 100%);
-    border-image-slice: 1 1 1 0;
-    bottom: -0.61em;
-    right: 0.16em;
-    width: 100%;
-    height: .31em;
-    transform: skewX(-45deg);
-  }
-  .btn:hover {
-    background-color: #efefef;
-    background-size: 90%;
-    transform: translate(0.5em, -0.5em);
-    box-shadow: -1em 1em 0.15em rgba(16, 24, 50, 0.1);
-  }
-  .btn:hover:before {
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYmNkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzAwOTdkZCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background-size: 100%;
-    background-image: -moz-linear-gradient(45deg, #555 0%, #b90912 100%);
-    background-image: -webkit-linear-gradient(45deg, #555 0%, #b90912 100%);
-    background-image: linear-gradient(45deg, #555 0%, #b90912 100%);
-    height: calc(100% - .13em);
-    border-image-slice: 1;
-  }
-  .btn:hover:after {
-    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjEuMCIgeDI9IjEuMCIgeTI9IjAuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwYmNkZCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2ZmMDBmZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-    background-size: 100%;
-    background-image: -moz-linear-gradient(45deg, #555 0%, #b90912 100%);
-    background-image: -webkit-linear-gradient(45deg, #555 0%, #b90912 100%);
-    background-image: linear-gradient(45deg, #555 0%, #b90912 100%);
-    width: calc(100% - .13em);
-    border-image-slice: 1;
-  }
+ 
 /*end of about me*/
 
 
@@ -410,7 +360,7 @@ header .navbar ul li a.current::before{
     transform: translateX(-50%);
     height: 4px;
     width: 100px;
-    background-color: #b90912;
+    background-color:  rgb(228, 13, 13);
 }
 
 .skills-container{
@@ -449,7 +399,7 @@ header .navbar ul li a.current::before{
     left: 0;
     transition: 2s;
     backface-visibility: hidden;
-    border: 1px solid #b90912;
+    border: 1px solid  rgb(228, 13, 13);
     border-radius: 5px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.5);
     margin-top: 3rem;
@@ -502,7 +452,7 @@ header .navbar ul li a.current::before{
     transform: translateX(-50%);
     height: 4px;
     width: 100px;
-    background-color: #b90912;
+    background-color:  rgb(228, 13, 13);
 }
 
 .portfolio .portfolio-gallery{
@@ -554,7 +504,7 @@ header .navbar ul li a.current::before{
 .portfolio .portfolio-gallery .item .overlay .fa{
     height: 50px;
     width: 50px;
-    background-color: #b90912;
+    background-color:  rgb(228, 13, 13);
     color: #fff;
     display: inline-block;
     text-align: center;
@@ -667,7 +617,7 @@ header .navbar ul li a.current::before{
 .lightbox .close-lightbox{
     height: 35px;
     width: 35px;
-    color: #b90912;
+    color:  rgb(228, 13, 13);
     background-color: #fff;
     text-align: center;
     line-height: 35px;
@@ -723,7 +673,7 @@ header .navbar ul li a.current::before{
     transform: translateX(-50%);
     height: 4px;
     width: 100px;
-    background-color: rgba(228, 13, 13, 0.966);
+    background-color:  rgb(228, 13, 13);
 }
 
 .contact-section .contact-container p{
@@ -748,7 +698,7 @@ header .navbar ul li a.current::before{
 }
     
 .contact-form i.fa:hover{
-    color: #b90912;
+    color:  rgb(228, 13, 13);
     transition: all 0.5s ease-out;
 }
 
@@ -787,7 +737,6 @@ textarea::placeholder{
     color: #fff;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:600");
 @-webkit-keyframes short-press {
   0% {
     -webkit-transform: scale(1);
@@ -879,19 +828,17 @@ textarea::placeholder{
         width: 100%;
         border-radius: 10px;
     }
-    .about-container img{
+    .about-container .about-content .about-photo img{
         height: 300px;
+        margin-top: 3rem;
     }
-    .about-text{
-        width: 400px;
+    #about .about-container .about-content p{
+        width: 90%;
+        text-align: center;
+        padding-bottom: 1.5rem;
     }
-    .about-text p:nth-child(1){
-        font-size: 30px;
-    }
-    .about-text p:nth-child(2),
-    .about-text p:nth-child(3){
-        font-size: 15px;
-    }
+    
+
 }
 @media(max-width: 991px){
     .home .home-content .block h1{
@@ -904,6 +851,23 @@ textarea::placeholder{
         grid-template-columns: repeat(2, 1fr);
         padding: 2rem 50px;
         grid-gap:3rem;
+    }
+    #about .about-container .about-content{
+        top: 50px;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        padding: 30px 0;
+        align-items: center;
+    }
+    .about-container .about-content .about-photo img{
+        height: 300px;
+        margin-top: 1.5rem;
+        margin-right: 150px;
+    }
+    #about .about-container .about-content p{
+        width: 90%;
+        text-align: center;
     }
 }
 @media(max-width: 767px){
@@ -949,7 +913,7 @@ textarea::placeholder{
         font-size: 20px;
     }
     header .navbar ul li a::before{
-        background-color: #b90912;
+        background-color:  rgb(228, 13, 13);
     }
     .hamburger .fa{
         display: inline-block;
@@ -971,26 +935,24 @@ textarea::placeholder{
     }
 }
 @media(max-width: 670px){
-    .about-container{
-        top: 50px;
+    #about .about-container .about-content{
+        
         flex-direction: column;
         width: 100%;
         height: auto;
         padding: 30px 0;
         align-items: center;
     }
-    .about-text{
-        width: 90%;
+    #about .about-container .about-content p{
+        width: 70%;
         text-align: center;
+        padding-bottom: 3rem;
     }
-    .about-text p:nth-child(1){
-        font-size: 35px;
-        margin-top: 15px;
+    .about-container .about-content .about-photo {
+        height: 300px;
+        margin-right: 180px;
     }
-    .about-text p:nth-child(2),
-    .about-text p:nth-child(3){
-        font-size: 15px;
-    }
+    
     .skills-container{
         grid-template-columns: repeat(1, 1fr);
         padding: 2rem 50px;
