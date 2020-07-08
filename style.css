@@ -81,7 +81,7 @@ header .navbar ul li a{
 header .navbar ul li a::before{
     content: '';
     height: 3px;
-    background-color:  rgb(228, 13, 13);
+    background-color:  #db1818;
     width: 0%;
     position: absolute;
     right: 0;
@@ -145,7 +145,7 @@ header .navbar ul li a.current::before{
     flex: 0 0 75%;
     max-width: 75%;
     padding-left: 35px;
-    border-left: 4px solid  rgb(228, 13, 13);
+    border-left: 4px solid  #db1818;
     margin-top: 50px;
     margin-left: 50px;
 }
@@ -265,7 +265,7 @@ header .navbar ul li a.current::before{
 }
 
 .icons a:hover{
-    color: rgb(228, 13, 13);
+    color: #db1818;
     transition: all 0.5s ease-out;
 }
 /*end of home*/
@@ -298,14 +298,14 @@ header .navbar ul li a.current::before{
     margin: 0 auto;
     margin-top: 1rem;
     width: 100px;
-    background-color:  rgb(228, 13, 13);
+    background-color:  #db1818;
     height: 3px;
 }
 
 #about .about-container .about-content{
     display: flex;
     position: relative;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     margin-top: 3rem;
 }
@@ -315,7 +315,8 @@ header .navbar ul li a.current::before{
     width: 250px;
     border: 1px solid #423940;
     border-radius: 10px;
-    margin-left: 150px;
+    margin-right: 70px;
+    margin-left: 100px;
 }
 
 #about .about-container .about-content p{
@@ -331,131 +332,92 @@ header .navbar ul li a.current::before{
 
 
 /*my skills*/
-.inner{
-    padding: 20px;
-    background-color: #d6dbdf;
-    border-radius: 20px;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    width: 99%;
-    margin: 2px auto 20px auto;
-    min-height: 100vh;
-    padding-left: 250px;
-}
-
-.skills-header{
-    text-align: center;
-    color: #2e2e2e;
-    padding: 1rem;
-    font-size: 25px;
-    position: relative;
-    margin-top: 3rem;
-    margin-right: 250px;
-}
-
-.skills-header:after{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 4px;
-    width: 100px;
-    background-color:  rgb(228, 13, 13);
-}
-
 .skills-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+    width: 99%;
+    min-height: 100vh;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    background: url(image/skills.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin: 2px auto 20px auto;
     align-items: center;
-    text-align: center;
-    grid-gap: 3rem;
-    margin-left: 120px;
-    margin-top: 6rem;
+    justify-content: center;
 }
 
-.skill-box{
-    cursor: pointer;
+.flex-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.img-hover{
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    width: 350px;
-    height: 250px;
-    
+.skill-container{
+	flex-wrap: wrap;
+	padding: 1rem 0;
 }
-.img-hover img{
-    width: 100%;
-    margin-bottom: 1rem;
+
+.flex-item{
+	padding: 0 1rem;
 }
-.img-hover .front,
-.img-hover .back{
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 2s;
-    backface-visibility: hidden;
-    border: 1px solid  rgb(228, 13, 13);
-    border-radius: 5px;
-    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+
+.skill-item{
+	margin-bottom: 1rem;
+}
+
+.skill-polygon{
+    font-weight: 600;
+    font-size: 18px;
+	text-align: center;
+	line-height: 130px;
+	width: 130px;
+	height: 130px;
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+	border: 3px solid #fff;
+	background: #db1818;
+	color: #fff;
+	position: relative;
+    transition: all 0.5s ease-out;
     margin-top: 3rem;
 }
-.img-hover .front{
-    transform: perspective(1000px) rotateY(0deg);
-    z-index: 2;
-    overflow: hidden;
+
+.skill-polygon:hover{
+	top: -10px;
 }
-.img-hover .back{
-    transform: perspective(1000px) rotateY(-180deg);
-    z-index: 2;
-    overflow: hidden;
-}
-.img-hover:hover .front{
-    transform: perspective(1000px) rotateY(-180deg);
-    z-index: 2;
-}
-.img-hover:hover .back{
-    transform: perspective(1000px) rotateY(0deg);
-    z-index: 2;
-}
+
 /*end of my skills*/
 
 /*projects*/
-.portfolio{
-    border-radius: 20px;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+.projects-container{
     width: 99%;
+    min-height: 100vh;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    background: #E7EAEF;
+    border-radius: 20px;
     margin: 2px auto 20px auto;
-    min-height: auto;
-    background-color: #d6dbdf;
+    align-items: center;
+    justify-content: center;
 }
 
-.portfolio-title{
+.skills-container h1{
     text-align: center;
-    color: #2e2e2e;
-    padding: 1rem;
-    font-size: 2em;
-    position: relative;
-    margin-top: 3rem;
-    margin-left: 480px;
+    color:#000;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 4.5rem;
 }
 
-.portfolio-title:after{
+.skills-container h1:after{
     content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    height: 4px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
     width: 100px;
-    background-color:  rgb(228, 13, 13);
+    background-color:  #db1818;
+    height: 3px;
 }
 
-.portfolio .portfolio-gallery{
+.portfolio-gallery{
     flex: 0 0 100%;
     max-width: 98%;
     margin-left: auto;
@@ -466,7 +428,7 @@ header .navbar ul li a.current::before{
     justify-content: space-evenly;
 }
 
-.portfolio .portfolio-gallery .item{
+.portfolio-gallery .item{
     flex: 0 0 33.33%;
     max-width: 30%;
     margin-bottom: 30px;
@@ -474,13 +436,13 @@ header .navbar ul li a.current::before{
     padding: 10px;
 }
 
-.portfolio .portfolio-gallery .item img{
+.portfolio-gallery .item img{
     width: 100%;
     display: block;
     height: 250px;
 }
 
-.portfolio .portfolio-gallery .item .overlay{
+.portfolio-gallery .item .overlay{
     position: absolute;
     left: 0;
     top: 0;
@@ -497,14 +459,14 @@ header .navbar ul li a.current::before{
     transition: all .5s ease;
 }
 
-.portfolio .portfolio-gallery .item:hover .overlay{
+.portfolio-gallery .item:hover .overlay{
     opacity: 1;
 }
 
-.portfolio .portfolio-gallery .item .overlay .fa{
+.portfolio-gallery .item .overlay .fa{
     height: 50px;
     width: 50px;
-    background-color:  rgb(228, 13, 13);
+    background-color:  #db1818;
     color: #fff;
     display: inline-block;
     text-align: center;
@@ -513,7 +475,7 @@ header .navbar ul li a.current::before{
     cursor: pointer;
 }
 
-.portfolio .portfolio-gallery .item:hover .overlay .fa{
+.portfolio-gallery .item:hover .overlay .fa{
     -webkit-animation: galleryIcon .8s ease;
     animation: galleryIcon .8s ease;
 }
@@ -523,14 +485,14 @@ header .navbar ul li a.current::before{
     100%{ transform: translateY(0); opacity: 1;}
 }
 
-.portfolio .portfolio-gallery .item .overlay h4{
+.portfolio-gallery .item .overlay h4{
     margin-top: 15px;
     font-size: 25px;
     color: #fff;
     font-weight: 600;
 }
 
-.portfolio .portfolio-gallery .item:hover .overlay h4{
+.portfolio-gallery .item:hover .overlay h4{
     -webkit-animation: galleryText .8s ease;
     animation: galleryText .8s ease;
 }
@@ -617,7 +579,7 @@ header .navbar ul li a.current::before{
 .lightbox .close-lightbox{
     height: 35px;
     width: 35px;
-    color:  rgb(228, 13, 13);
+    color:  #db1818;
     background-color: #fff;
     text-align: center;
     line-height: 35px;
@@ -673,7 +635,7 @@ header .navbar ul li a.current::before{
     transform: translateX(-50%);
     height: 4px;
     width: 100px;
-    background-color:  rgb(228, 13, 13);
+    background-color:  #db1818;
 }
 
 .contact-section .contact-container p{
@@ -698,7 +660,7 @@ header .navbar ul li a.current::before{
 }
     
 .contact-form i.fa:hover{
-    color:  rgb(228, 13, 13);
+    color:  #db1818;
     transition: all 0.5s ease-out;
 }
 
@@ -913,7 +875,7 @@ textarea::placeholder{
         font-size: 20px;
     }
     header .navbar ul li a::before{
-        background-color:  rgb(228, 13, 13);
+        background-color:  #db1818;
     }
     .hamburger .fa{
         display: inline-block;
