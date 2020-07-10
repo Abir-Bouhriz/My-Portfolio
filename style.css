@@ -71,7 +71,7 @@ header .navbar ul li{
 header .navbar ul li a{
     font-size: 20px;
     text-decoration: none;
-    line-height: 72px;
+    line-height: 62px;
     color: #fff;
     display: block;
     font-weight: 600;
@@ -289,7 +289,7 @@ header .navbar ul li a.current::before{
     font-size: 3rem;
     font-weight: 400;
     text-align: center;
-    padding-top: 4.5rem;
+    padding-top: 3rem;
 }
 
 #about h1:after{
@@ -307,7 +307,7 @@ header .navbar ul li a.current::before{
     position: relative;
     justify-content: center;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 4.5rem;
 }
 
 #about .about-container .about-content .about-photo img{
@@ -351,7 +351,7 @@ header .navbar ul li a.current::before{
     font-size: 3rem;
     font-weight: 400;
     text-align: center;
-    padding-top: 4.5rem;
+    padding-top: 3rem;
 }
 
 .skills-container h1:after{
@@ -396,7 +396,7 @@ header .navbar ul li a.current::before{
 	color: #fff;
 	position: relative;
     transition: all 0.5s ease-out;
-    margin-top: 3rem;
+    margin-top: 4.5rem;
 }
 
 .skill-polygon:hover{
@@ -404,6 +404,110 @@ header .navbar ul li a.current::before{
 }
 
 /*end of my skills*/
+
+/*experience*/
+.experience-container{
+    width: 99%;
+    min-height: 100vh;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    background: url(image/skills.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin: 2px auto 20px auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.process-wrapper{
+    margin: auto;
+    max-width: 1080px;
+}
+
+.progress-bar-container{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 100px;
+    margin-top: 59px;
+}
+
+.progress-bar-container ul{
+    padding: 0;
+    margin: 0;
+    padding-top: 15px;
+    z-index: 9999;
+    position: absolute;
+    width: 100%;
+    margin-top: -40px;
+}
+
+.progress-bar-container li{
+    list-style: none;
+    float: left;
+    width: 20%;
+    text-align: center;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 11px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: all ease 0.2s;
+    vertical-align: bottom;
+    height: 59px;
+    position: relative;
+}
+.progress-bar-container li:before{
+    content: '';
+    display: block;
+    margin: auto;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #000;
+    transition: all ease 0.3s;
+}
+
+.progress-bar-container li.active:before,
+.progress-bar-container li:hover:before{
+    background: #db1818;
+}
+
+.progress-bar-container li .step-inner{
+    position: absolute;
+    width: 100%;
+    font-size: 14px;
+    bottom: 0;
+}
+
+.progress-bar-container li.active,
+.progress-bar-container li:hover{
+    color: #db1818;
+}
+
+.progress-bar-container li:after{
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    background: #000;
+    margin: auto;
+    border: 7px solid white;
+    border-radius: 50%;
+    margin-top: 40px;
+    box-shadow: 0 2px 13px -1px rgba(0,0,0,0.3);
+    transition: all ease 0.2s;
+}
+
+.progress-bar-container li:hover:after{
+    background: #db1818;
+}
+
+.progress-bar-container li.activer:after{
+    background: #db1818;
+}
+
+/*end of experience*/
 
 /*projects*/
 .projects-container{
@@ -422,7 +526,7 @@ header .navbar ul li a.current::before{
     max-width: 98%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 1rem;
+    margin-top: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -599,21 +703,6 @@ header .navbar ul li a.current::before{
 }
 /*end of lightbox*/
 /*end of projects*/
-
-/*experience*/
-.experience-container{
-    width: 99%;
-    min-height: 100vh;
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    background: url(image/skills.jpg);
-    background-size: cover;
-    background-position: center;
-    border-radius: 20px;
-    margin: 2px auto 20px auto;
-    align-items: center;
-    justify-content: center;
-}
-/*end of experience*/
 
 /*contact*/
 .contact-container{
