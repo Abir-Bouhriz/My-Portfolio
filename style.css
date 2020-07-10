@@ -345,6 +345,25 @@ header .navbar ul li a.current::before{
     justify-content: center;
 }
 
+.skills-container h1{
+    text-align: center;
+    color:#000;
+    font-size: 3rem;
+    font-weight: 400;
+    text-align: center;
+    padding-top: 4.5rem;
+}
+
+.skills-container h1:after{
+    content: '';
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 100px;
+    background-color:  #db1818;
+    height: 3px;
+}
+
 .flex-container{
 	display: flex;
 	justify-content: center;
@@ -396,25 +415,6 @@ header .navbar ul li a.current::before{
     margin: 2px auto 20px auto;
     align-items: center;
     justify-content: center;
-}
-
-.skills-container h1{
-    text-align: center;
-    color:#000;
-    font-size: 3rem;
-    font-weight: 400;
-    text-align: center;
-    padding-top: 4.5rem;
-}
-
-.skills-container h1:after{
-    content: '';
-    display: block;
-    margin: 0 auto;
-    margin-top: 1rem;
-    width: 100px;
-    background-color:  #db1818;
-    height: 3px;
 }
 
 .portfolio-gallery{
@@ -485,14 +485,15 @@ header .navbar ul li a.current::before{
     100%{ transform: translateY(0); opacity: 1;}
 }
 
-.portfolio-gallery .item .overlay h4{
+.portfolio-gallery .item .overlay a{
     margin-top: 15px;
     font-size: 25px;
     color: #fff;
     font-weight: 600;
+    text-decoration: none;
 }
 
-.portfolio-gallery .item:hover .overlay h4{
+.portfolio-gallery .item:hover .overlay a{
     -webkit-animation: galleryText .8s ease;
     animation: galleryText .8s ease;
 }
@@ -598,6 +599,21 @@ header .navbar ul li a.current::before{
 }
 /*end of lightbox*/
 /*end of projects*/
+
+/*experience*/
+.experience-container{
+    width: 99%;
+    min-height: 100vh;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    background: url(image/skills.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    margin: 2px auto 20px auto;
+    align-items: center;
+    justify-content: center;
+}
+/*end of experience*/
 
 /*contact*/
 .contact-container{
