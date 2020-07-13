@@ -419,9 +419,10 @@ header .navbar ul li a.current::before{
 
 .timeline{
     position: relative;
-    margin: 50px auto;
+    margin: 30px auto;
     padding: 40px 0;
     width: 1000px;
+    box-sizing: border-box;
 }
 
 .timeline:before{
@@ -429,8 +430,9 @@ header .navbar ul li a.current::before{
     position: absolute;
     left: 50%;
     width: 2px;
-    height: 100%;
-    background: #c5c5c5;
+    height: 87%;
+    background: #5e5959;
+    padding-bottom: 0;
 }
 
 .timeline ul{
@@ -455,6 +457,77 @@ header .navbar ul li a.current::before{
     float: right;
     text-align: left;
     clear: both;
+}
+
+.tl-content{
+    padding-bottom: 20px;
+}
+
+.timeline ul li:nth-child(odd):before{
+    content: '';
+    position: absolute;
+    top: 24px;
+    right: -6px;
+    width: 10px;
+    height: 10px;
+    background: rgba(219,24,24,1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(219,24,24,0.2);
+}
+
+.timeline ul li:nth-child(even):before{
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: -6px;
+    width: 10px;
+    height: 10px;
+    background: rgba(219,24,24,1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(219,24,24,0.2);
+}
+
+.timeline ul li h3{
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+    color: rgba(219,24,24,1);
+    font-size: 20px;
+}
+
+.timeline ul li p{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.timeline ul li .time h4{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.timeline ul li:nth-child(odd) .time{
+    position: absolute;
+    top: 12px;
+    right: -165px;
+    margin: 0;
+    padding: 4px 20px;
+    background: rgba(219,24,24,1);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(219,24,24,0.3);
+}
+
+.timeline ul li:nth-child(even) .time{
+    position: absolute;
+    top: 12px;
+    left: -165px;
+    margin: 0;
+    padding: 4px 20px;
+    background: rgba(219,24,24,1);
+    color: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(219,24,24,0.3);
 }
 
 
@@ -856,8 +929,9 @@ textarea::placeholder{
         text-align: center;
         padding-bottom: 1.5rem;
     }
-    
-
+    .timeline{
+        width: 100%;
+    }
 }
 @media(max-width: 991px){
     .home .home-content .block h1{
@@ -951,6 +1025,30 @@ textarea::placeholder{
     }
     .contact-section .submit{
         width: 60%;
+    }
+    .timeline{
+        width: 100%;
+    }
+    .timeline:before{
+        left: 20px;
+    }
+    .timeline ul li:nth-child(odd),
+    .timeline ul li:nth-child(even){
+        width: 100%;
+        text-align: left;
+        padding-left: 50px;
+        padding-bottom: 50px;
+    }
+    .timeline ul li:nth-child(odd):before,
+    .timeline ul li:nth-child(even):before{
+        top: -18px;
+        left: 16px;
+    }
+    .timeline ul li:nth-child(odd) .time,
+    .timeline ul li:nth-child(even) .time{
+        top: -30px;
+        left: 50px;
+        right: inherit;
     }
 }
 @media(max-width: 670px){
