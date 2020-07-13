@@ -314,9 +314,16 @@ header .navbar ul li a.current::before{
     height: 300px;
     width: 250px;
     border: 1px solid #423940;
-    border-radius: 10px;
+    border-radius: 50%;
     margin-right: 70px;
     margin-left: 100px;
+	filter: blur(3px);
+    transition: .3s ease-in-out;
+    
+}
+
+#about .about-container .about-content .about-photo img:hover{
+    filter: blur(0);
 }
 
 #about .about-container .about-content p{
@@ -512,10 +519,15 @@ header .navbar ul li a.current::before{
     right: -165px;
     margin: 0;
     padding: 4px 20px;
+    color: #000;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(219,24,24,0.7);
+    transition: all 0.7s;
+}
+.timeline ul li:nth-child(odd) .time:hover{
     background: rgba(219,24,24,1);
     color: #fff;
-    border-radius: 18px;
-    box-shadow: 0 0 0 3px rgba(219,24,24,0.3);
+    transition: all 0.7s;
 }
 
 .timeline ul li:nth-child(even) .time{
@@ -524,11 +536,17 @@ header .navbar ul li a.current::before{
     left: -165px;
     margin: 0;
     padding: 4px 20px;
+    color: #000;
+    border-radius: 18px;
+    box-shadow: 0 0 0 3px rgba(219,24,24,0.7);
+    transition: all 0.7s;
+}
+.timeline ul li:nth-child(even) .time:hover{
     background: rgba(219,24,24,1);
     color: #fff;
-    border-radius: 18px;
-    box-shadow: 0 0 0 3px rgba(219,24,24,0.3);
+    transition: all 0.7s;
 }
+
 
 
 
@@ -925,9 +943,10 @@ textarea::placeholder{
         margin-top: 3rem;
     }
     #about .about-container .about-content p{
-        width: 90%;
-        text-align: center;
+        width: 70%;
+        text-align: left;
         padding-bottom: 1.5rem;
+        padding-right: 30px;
     }
     .timeline{
         width: 100%;
@@ -937,6 +956,7 @@ textarea::placeholder{
     .home .home-content .block h1{
         font-size: 50px;
     }
+
 }
 
 @media(max-width: 850px){
@@ -954,13 +974,23 @@ textarea::placeholder{
         align-items: center;
     }
     .about-container .about-content .about-photo img{
-        height: 300px;
-        margin-top: 1.5rem;
-        margin-right: 150px;
+        height: 400px;
+        margin-top: 1rem;
     }
     #about .about-container .about-content p{
         width: 90%;
         text-align: center;
+        padding-top: 30px;
+        padding-bottom: 50px;
+    }
+    .portfolio-gallery .item{
+        flex: 0 0 50%;
+        max-width: 50%;
+        position: relative;
+        padding: 8px;
+    }
+    .skill-polygon{
+        margin-top: 20px;
     }
 }
 @media(max-width: 767px){
@@ -1023,8 +1053,9 @@ textarea::placeholder{
         width: 100%;
         text-align: center;
     }
-    .contact-section .submit{
-        width: 60%;
+    .contact-section .submit-button{
+        margin-left: 250px;
+        align-items: center;
     }
     .timeline{
         width: 100%;
@@ -1053,7 +1084,6 @@ textarea::placeholder{
 }
 @media(max-width: 670px){
     #about .about-container .about-content{
-        
         flex-direction: column;
         width: 100%;
         height: auto;
@@ -1062,17 +1092,25 @@ textarea::placeholder{
     }
     #about .about-container .about-content p{
         width: 70%;
-        text-align: center;
         padding-bottom: 3rem;
     }
     .about-container .about-content .about-photo {
         height: 300px;
-        margin-right: 180px;
     }
     
     .skills-container{
         grid-template-columns: repeat(1, 1fr);
         padding: 2rem 50px;
+    }
+    .message-text .text{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .message-text .button{
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: left;
+        padding-top: 20px;
     }
     
 }
@@ -1086,7 +1124,24 @@ textarea::placeholder{
     .home .home-content .block{
         padding-left: 20px;
     }
-    
+    .portfolio-gallery .item{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .message-text .text{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+    .message-text .button{
+        flex: 0 0 100%;
+        max-width: 100%;
+        text-align: left;
+        padding-top: 20px;
+    }
+    .contact-section .submit-button{
+        margin-left: 150px;
+        align-items: center;
+    }
 }
 
 
