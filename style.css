@@ -26,11 +26,11 @@ header{
     top: 0;
     right: 0;
     padding: 0 15px;
-    border-bottom: 1px solid #423940;
+    border-bottom: 1px solid #000;
     z-index: 50;
     border-radius: 20px;
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
-    background-color: transparent;
+    background-color: #E7EAEF;
     width: 99%;
     margin: 2px auto 20px auto;
 }
@@ -72,9 +72,9 @@ header .navbar ul li a{
     font-size: 20px;
     text-decoration: none;
     line-height: 62px;
-    color: #fff;
+    color: #000;
     display: block;
-    font-weight: 600;
+    font-weight: 900;
     position: relative;
 }
 
@@ -315,22 +315,22 @@ header .navbar ul li a.current::before{
     width: 250px;
     border: 1px solid #423940;
     border-radius: 50%;
-    margin-right: 70px;
+    margin-right: 120px;
     margin-left: 100px;
-	filter: blur(3px);
-    transition: .3s ease-in-out;
+	transform: scale(1);
+	transition: .3s ease-in-out;
     
 }
 
 #about .about-container .about-content .about-photo img:hover{
-    filter: blur(0);
+    transform: scale(1.3);
 }
 
 #about .about-container .about-content p{
     font-size: 25px;
     color: #000;
     line-height: 1.5rem;
-    width: 500px;
+    width: 700px;
     padding-bottom: 1.5rem;
 }
 
@@ -923,7 +923,19 @@ textarea::placeholder{
   margin-top: -76px;
 }
 /*end of contact*/
-
+/*footer*/
+#main-footer{
+    text-align: center;
+	background: #282828;
+	color: #fff;
+    height: 45px;
+    line-height: 45px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    width: 99%;
+    margin: 2px auto 20px auto;
+}
+/*end of footer*/
 
 /*responsive*/
 @media(max-width: 1200px){
