@@ -7,8 +7,8 @@ This repo contains a portfolio resume that showcases examples of  skills along w
 * JavaScript
 * Visual Studio Code ( Text editor )
 ## ScreenShots:
-<img src="screenshot/1.png" />
-<img src="screenshot/2.png" />
-<img src="screenshot/3.png" />
-<img src="screenshot/3.png" />
-<img src="screenshot/4.png" />
+<img src="screenshots/1.png" />
+<img src="screenshots/2.png" />
+<img src="screenshots/3.png" />
+<img src="screenshots/3.png" />
+<img src="screenshots/4.png" />
