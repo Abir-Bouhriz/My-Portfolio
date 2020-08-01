@@ -311,19 +311,19 @@ header .navbar ul li a.current::before{
 }
 
 #about .about-container .about-content .about-photo img{
-    height: 300px;
-    width: 250px;
-    border: 1px solid #423940;
+    height: 250px;
+    width: 200px;
+    border: 2px solid #db1818;
     border-radius: 50%;
     margin-right: 120px;
     margin-left: 100px;
-	transform: scale(1);
+    transform: scale(1.25);
 	transition: .3s ease-in-out;
     
 }
 
 #about .about-container .about-content .about-photo img:hover{
-    transform: scale(1.3);
+    transform: scale(1);
 }
 
 #about .about-container .about-content p{
