@@ -10,5 +10,4 @@ This repo contains a portfolio resume that showcases examples of  skills along w
 <img src="screenshots/1.png" />
 <img src="screenshots/2.png" />
 <img src="screenshots/3.png" />
-<img src="screenshots/3.png" />
 <img src="screenshots/4.png" />
