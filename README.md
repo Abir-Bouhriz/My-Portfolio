@@ -1,7 +1,7 @@
 # Portfolio
 https://abir-bouhriz.github.io/My-Portfolio/
 ## Description:
-This repo contains a portfolio resume that showcases examples of  skills along with the usual resume information about work experience. It is  fully responsive.
+My personal responsive one page Portfolio created with Kards template.
 ## Tools & languages:
 * HTML
 * CSS
